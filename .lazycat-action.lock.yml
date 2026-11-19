@@ -6,7 +6,7 @@ source:
     revision: b6b4b80df113656bfa4872cab31c7319e89438a9
     tag: v3.4.2
 fingerprint: sha256:502dfc513b930fb5e6ee4e82cb3e6e957ed517769f1aa1ba991f8c5daf359835
-status: packaged
+status: submitted
 images:
     - id: immich-server
       source_ref: ghcr.io/immich-app/immich-server:v3.4.2@sha256:17eee2e51be12fe7c2d0bc0b5a851c5ffbdf62fca97b975373df7c5d62a13b4b
@@ -142,3 +142,17 @@ reviews:
       created_at: 2026-11-12T11:53:43.841Z
       submitted_at: 2026-11-12T11:53:43.963945578Z
       checked_at: 2026-11-13T11:29:10.9776582Z
+    - id: 23532
+      source:
+        kind: git
+        version: 3.4.2
+        ref: refs/tags/v3.4.2
+        revision: b6b4b80df113656bfa4872cab31c7319e89438a9
+        tag: v3.4.2
+      fingerprint: sha256:502dfc513b930fb5e6ee4e82cb3e6e957ed517769f1aa1ba991f8c5daf359835
+      application_version: 3.4.2
+      lpk_sha256: 6427269b339a542d61050443ff5f9cb3c79829c32d44dd2575018d31a13141ea
+      status: waiting
+      created_at: 2026-11-19T12:11:31.187Z
+      submitted_at: 2026-11-19T12:11:31.33658929Z
+      checked_at: 2026-11-19T12:11:31.336589891Z
