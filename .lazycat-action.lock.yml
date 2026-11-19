@@ -1,21 +1,21 @@
 version: 2
 source:
     kind: git
-    version: 3.4.1
-    ref: refs/tags/v3.4.1
-    revision: 22b95194c80a2f2e6201093916b6c8c3d6d271dd
-    tag: v3.4.1
-fingerprint: sha256:778c5e77b88c7f6b42ecb778df7f3c42c802fb6fd406ea1009ac6c4354f067e7
-status: submitted
+    version: 3.4.2
+    ref: refs/tags/v3.4.2
+    revision: b6b4b80df113656bfa4872cab31c7319e89438a9
+    tag: v3.4.2
+fingerprint: sha256:502dfc513b930fb5e6ee4e82cb3e6e957ed517769f1aa1ba991f8c5daf359835
+status: packaged
 images:
     - id: immich-server
-      source_ref: ghcr.io/immich-app/immich-server:v3.4.1@sha256:4351dd621899ecc8ed317ae87cdcaeb968ec8ba4f9d8053d913a73eb6f6dd7c2
-      source_digest: sha256:4351dd621899ecc8ed317ae87cdcaeb968ec8ba4f9d8053d913a73eb6f6dd7c2
-      runtime_ref: registry.lazycat.cloud/peter/immich-app/immich-server:258f0488e7387357
+      source_ref: ghcr.io/immich-app/immich-server:v3.4.2@sha256:17eee2e51be12fe7c2d0bc0b5a851c5ffbdf62fca97b975373df7c5d62a13b4b
+      source_digest: sha256:17eee2e51be12fe7c2d0bc0b5a851c5ffbdf62fca97b975373df7c5d62a13b4b
+      runtime_ref: registry.lazycat.cloud/peter/immich-app/immich-server:95556d95e709f5bd
     - id: machine-learning
-      source_ref: ghcr.io/immich-app/immich-machine-learning:v3.4.1@sha256:0fd58356ac250e2fc306f89a56a431181d708677d63ba2867c8b205484856652
-      source_digest: sha256:0fd58356ac250e2fc306f89a56a431181d708677d63ba2867c8b205484856652
-      runtime_ref: registry.lazycat.cloud/peter/immich-app/immich-machine-learning:000de7a937afb77d
+      source_ref: ghcr.io/immich-app/immich-machine-learning:v3.4.2@sha256:72db2089878746176c1a5083272cd2d73e4270f839596b42bdf6b12887bbbb89
+      source_digest: sha256:72db2089878746176c1a5083272cd2d73e4270f839596b42bdf6b12887bbbb89
+      runtime_ref: registry.lazycat.cloud/peter/immich-app/immich-machine-learning:1ef65a641d5a0229
     - id: redis
       source_ref: docker.io/valkey/valkey:9@sha256:70739f85ad2ee01a726a965584a0f94895f01b0c60b3cc8b0aeef11eaa6888cf
       source_digest: sha256:c7f03d95d897f97eef7ec2d4a6a1e2c0cbe62a36a56b00f304aa536cbe3ec9c1
@@ -26,21 +26,22 @@ images:
       runtime_ref: registry.lazycat.cloud/peter/immich-app/postgres:bacbe7b332150178
 application:
     package: dev.libr.immich
-    version: 3.4.1
-    lpk_sha256: d551cea880e15a6a58a3c425a1379ab8aedea3afbace645d251f8a7644453c27
+    version: 3.4.2
+    lpk_sha256: 6427269b339a542d61050443ff5f9cb3c79829c32d44dd2575018d31a13141ea
     changelog: |-
-        Upstream 3.4.1 (since 3.4.0)
-        - chore: version v3.4.1
-        - feat: futo backups 1.16.0 (#33217)
-        - fix: prometheus exporter should listen on all interfaces (#33209)
-        - fix: workflow step fields default values (#33212)
-        - fix: filename element on detail panel (#33208)
-        - fix(web): highlight advanced search filters with camera filters set (#33200)
-        - fix(web): info panel filename alignment (#33187)
-        - fix(server): queue job status query (#33185)
-        - perf(server): shared links cover query (#33186)
-        - fix(server): map .hif to image/heif (#33172)
-packaged_at: 2026-11-12T11:53:19.935828608Z
+        Upstream 3.4.2 (since 3.4.1)
+        - chore: version v3.4.2
+        - fix(server): drop range=pc on vaapi (#33458)
+        - fix: prometheus exporter listening (#33457)
+        - chore: bump backups to 1.18.1 and futo-org/restic to 0.19.1-futo.2 (#33448)
+        - chore(android): upload to Google Play as part of release CI (#33422)
+        - fix: integrity report downloads (#33420)
+        - fix(web): hash external styles for csp (#33411)
+        - feat: credit additional users in release notes (#33412)
+        - fix: filename alignment detail panel (#33256)
+        - fix(web): prevent duplicate combobox keys on unknown camera make (#33214)
+        - fix(web): hide slideshow play/pause without autoplay (#33220)
+packaged_at: 2026-11-19T12:11:10.554555574Z
 reviews:
     - id: 20112
       source:
