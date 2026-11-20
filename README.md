@@ -15,7 +15,7 @@
 
 ## GitHub 设置
 
-在本仓库的 Actions secrets 中设置 `LZC_API_TOKEN`。可选设置 `LZC_API_HOST`；不设置时使用生产应用商店地址。仓库 Actions 权限需要允许写入 Contents，使流水线能够提交更新后的版本、Manifest 和状态锁。
+在 `lazycat-adapter` 组织的 Actions secrets 中设置 `LZC_API_TOKEN`，并将本仓库加入该 Secret 的授权范围。可选设置 `LZC_API_HOST`；不设置时使用生产应用商店地址。仓库 Actions 权限需要允许写入 Contents，使流水线能够提交更新后的版本、Manifest 和状态锁。
 
 推送配置只进行 dry-run。正式更新可在 **Actions → Update Immich for LazyCat → Run workflow** 中取消勾选 dry-run，或等待每日定时任务。
 
